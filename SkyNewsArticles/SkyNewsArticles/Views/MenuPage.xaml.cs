@@ -18,8 +18,9 @@ namespace SkyNewsArticles.Views
 
             menuItems = new List<HomeMenuItem>
             {
-                new HomeMenuItem {Id = MenuItemType.Browse, Title="Browse" },
-                new HomeMenuItem {Id = MenuItemType.About, Title="About" }
+                new HomeMenuItem {Id = MenuItemType.Articles, Title="Articles" },
+                new HomeMenuItem {Id = MenuItemType.menulist2, Title="menulist2" },
+                new HomeMenuItem {Id = MenuItemType.menulist3, Title="menulist3" }
             };
 
             ListViewMenu.ItemsSource = menuItems;

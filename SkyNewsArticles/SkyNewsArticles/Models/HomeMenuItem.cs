@@ -6,8 +6,9 @@ namespace SkyNewsArticles.Models
 {
     public enum MenuItemType
     {
-        Browse,
-        About
+        Articles,
+        menulist2,
+        menulist3
     }
     public class HomeMenuItem
     {

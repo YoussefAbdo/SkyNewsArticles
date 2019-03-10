@@ -17,7 +17,7 @@ namespace SkyNewsArticles.Views
 
             MasterBehavior = MasterBehavior.Popover;
 
-            MenuPages.Add((int)MenuItemType.Browse, (NavigationPage)Detail);
+            MenuPages.Add((int)MenuItemType.Articles, (NavigationPage)Detail);
         }
 
         public async Task NavigateFromMenu(int id)
@@ -26,16 +26,20 @@ namespace SkyNewsArticles.Views
             {
                 switch (id)
                 {
-                    case (int)MenuItemType.Browse:
-                        MenuPages.Add(id, new NavigationPage(new ItemsPage()));
+                    case (int)MenuItemType.Articles:
+                        MenuPages.Add(id, new NavigationPage(new ArticlesPage()));
                         break;
-                    case (int)MenuItemType.About:
-                        MenuPages.Add(id, new NavigationPage(new AboutPage()));
+                    case (int)MenuItemType.menulist2:
+                        break;
+                    case (int)MenuItemType.menulist3:
                         break;
                 }
             }
 
-            var newPage = MenuPages[id];
+            // As we have only one page we set Menupages to Zero
+            //var newPage = MenuPages[id];
+            var newPage = MenuPages[0];
+
 
             if (newPage != null && Detail != newPage)
             {
